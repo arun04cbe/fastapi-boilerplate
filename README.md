@@ -1,2 +1,1 @@
-# fastapi-boilerplate
-Boiler Plate for Python FASTAI server
+# Boiler Plate for Python FastAPI server
