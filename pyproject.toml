@@ -19,6 +19,6 @@ where = ["."]
 include = ["src*"]
 
 [dependency-groups]
-dev = [
+lint = [
     "ruff>=0.11.13",
 ]
