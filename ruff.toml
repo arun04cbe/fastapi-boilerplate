@@ -1,0 +1,17 @@
+
+# Formatter
+line-length = 120
+
+include = ["pyproject.toml", "src/**/*.py",]
+
+# Linters for the project
+[lint]
+select = ["ALL"]
+ignore = ["S104"]
+
+[lint.per-file-ignores]
+"__init__.py" = ["E402"]
+
+# Documentation Style
+[lint.pydocstyle]
+convention = "google" # Accepts: "google", "numpy", or "pep257"

@@ -17,3 +17,8 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["src*"]
+
+[dependency-groups]
+lint = [
+    "ruff>=0.11.13",
+]

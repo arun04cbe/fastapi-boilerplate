@@ -1,5 +1,8 @@
-from fastapi import FastAPI
+"""FastAPI boilerplate main file."""
+
 import uvicorn
+from fastapi import FastAPI
+
 from src.config import settings
 
 app = FastAPI(
@@ -9,8 +12,14 @@ app = FastAPI(
 
 
 @app.get("/")
-async def status():
+async def status() -> dict:
+    """Health check endpoint.
+
+    Returns:
+        dict: A dictionary with the status of the service.
+    """
     return {"status": "ok"}
+
 
 if __name__ == "__main__":
     uvicorn.run(
