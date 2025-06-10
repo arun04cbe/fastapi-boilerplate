@@ -1,0 +1,19 @@
+[project]
+name = "fastapi-boilerplate"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12.4"
+dependencies = [
+    "fastapi>=0.115.12",
+    "pydantic-settings>=2.9.1",
+    "uvicorn>=0.34.3",
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
