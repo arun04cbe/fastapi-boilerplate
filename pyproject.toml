@@ -19,6 +19,9 @@ where = ["."]
 include = ["src*"]
 
 [dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+]
 lint = [
     "ruff>=0.11.13",
 ]
