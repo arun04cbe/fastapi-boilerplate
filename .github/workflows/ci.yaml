@@ -2,12 +2,12 @@ name: lint-format-test
 
 on:
   pull_request:
+  push:
     branches:
-    push:
       - main
 
--jobs:
-  lint:
+jobs:
+  lint-format-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
