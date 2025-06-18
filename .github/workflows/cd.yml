@@ -1,0 +1,21 @@
+name: docker-build-push
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  docker-build-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_SECRET }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: Build the Docker image
+        run: docker build -t arun04cbe/dev:fastapi-boilerplate .
+
+      - name: Push the Docker image
+        run: docker push arun04cbe/dev:fastapi-boilerplate
